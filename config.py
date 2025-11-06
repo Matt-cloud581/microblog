@@ -21,3 +21,5 @@ class Config:
     PREFERRED_URL_SCHEME = 'http'
 
     POSTS_PER_PAGE = 3
+    
+    LANGUAGES = ['en', 'es']
