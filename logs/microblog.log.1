@@ -1,0 +1,83 @@
+2025-11-05 20:58:40,227 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:09:02,859 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:56]
+2025-11-05 21:11:54,206 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:56]
+2025-11-05 21:14:04,984 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:56]
+2025-11-05 21:16:01,425 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:21:52,490 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:22:52,122 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:25:16,555 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:25:29,029 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:27:02,721 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:30:53,957 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:31:03,097 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:31:55,865 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:33:13,542 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:34:18,653 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:34:55,093 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:36:32,648 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:36:51,813 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:37:09,099 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:37:26,349 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:40:05,248 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:42:09,951 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:43:20,761 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:44:41,988 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-05 21:45:32,365 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:55]
+2025-11-07 06:52:44,863 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:52:57,977 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:53:08,016 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:53:33,115 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:54:15,441 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:55:48,875 INFO: Microblog startup [in /home/matthew/projects/microblog/app/__init__.py:54]
+2025-11-07 06:55:56,363 ERROR: Exception on / [GET] [in /home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
+Traceback (most recent call last):
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/app/routes.py", line 43, in index
+    return render_template('index.html', title=_('Home'), form=form,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/matthew/projects/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/app/templates/base.html", line 58, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/app/templates/index.html", line 5, in block 'content'
+    <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/jinja2/ext.py", line 168, in _gettext_alias
+    return __context.call(__context.resolve("gettext"), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/jinja2/ext.py", line 180, in gettext
+    return rv % variables  # type: ignore
+           ~~~^~~~~~~~~~~
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/markupsafe/__init__.py", line 165, in __mod__
+    return self.__class__(super().__mod__(value))
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/markupsafe/__init__.py", line 367, in __getitem__
+    return self.__class__(self.obj[key], self.escape)
+                          ~~~~~~~~^^^^^
+KeyError: 'nombre de usuario'

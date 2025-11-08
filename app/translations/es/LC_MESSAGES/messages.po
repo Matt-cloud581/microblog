@@ -185,7 +185,7 @@ msgstr "Cerrar sesión"
 #: app/templates/index.html:5
 #, python-format
 msgid "Hi, %(username)s!"
-msgstr "¡Hola, %(nombre de usuario)s!"
+msgstr "¡Hola, %(username)s!"
 
 #: app/templates/index.html:16 app/templates/user.html:41
 msgid "Newer posts"
@@ -217,7 +217,7 @@ msgstr "Restablecer su contraseña"
 
 #: app/templates/user.html:8
 msgid "User"
-msgstr "User"
+msgstr "Usuario"
 
 #: app/templates/user.html:11
 msgid "Last seen on"
