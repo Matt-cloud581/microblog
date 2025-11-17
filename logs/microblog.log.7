@@ -1,4 +1,4 @@
-2025-11-12 20:48:46,341 ERROR: Exception on /index [GET] [in /home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
+2025-11-10 21:33:35,956 ERROR: Exception on /index [GET] [in /home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask/app.py:875]
 Traceback (most recent call last):
   File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
     self.dialect.do_execute(
@@ -24,7 +24,7 @@ Traceback (most recent call last):
   File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/matthew/projects/microblog/app/routes.py", line 45, in index
+  File "/home/matthew/projects/microblog/app/routes.py", line 44, in index
     posts = db.paginate(current_user.following_posts(), page=page,
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/matthew/projects/microblog/venv/lib/python3.12/site-packages/flask_sqlalchemy/extension.py", line 839, in paginate
@@ -70,5 +70,5 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post
 FROM post JOIN user AS user_1 ON user_1.id = post.user_id LEFT OUTER JOIN (followers AS followers_1 JOIN user AS user_2 ON followers_1.follower_id = user_2.id) ON followers_1.followed_id = user_1.id 
 WHERE user_2.id = ? OR user_1.id = ? GROUP BY post.id, post.body, post.timestamp, post.user_id, post.language ORDER BY post.timestamp DESC
  LIMIT ? OFFSET ?]
-[parameters: (2, 2, 3, 0)]
+[parameters: (4, 4, 3, 0)]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
