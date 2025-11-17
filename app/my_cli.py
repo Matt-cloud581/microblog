@@ -1,16 +1,14 @@
 import os
-from flask import Blueprint
+import shutil
+import polib
 import click
-import shutil, polib
+from app import app
 from app.my_translate import translate  # assumes translate(msgid, src, dest)
-bp = Blueprint('cli', __name__, cli_group=None)
 
-
-@bp.cli.group()
+@app.cli.group()
 def babel():
     """Translation and localization commands."""
     pass
-
 
 @babel.command()
 @click.argument('lang')
@@ -18,11 +16,9 @@ def init(lang):
     """Initialize a new language."""
     if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
         raise RuntimeError('extract command failed')
-    if os.system(
-            'pybabel init -i messages.pot -d app/translations -l ' + lang):
+    if os.system('pybabel init -i messages.pot -d app/translations -l ' + lang):
         raise RuntimeError('init command failed')
     os.remove('messages.pot')
-
 
 @babel.command()
 def update():
@@ -33,12 +29,12 @@ def update():
         raise RuntimeError('update command failed')
     os.remove('messages.pot')
 
-
 @babel.command()
 def compile():
     """Compile all languages."""
     if os.system('pybabel compile -d app/translations'):
         raise RuntimeError('compile command failed')
+
 @babel.command()
 @click.argument('lang')
 @click.option('--src', default='en', help='Source language (default: en)')

@@ -1,10 +1,10 @@
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from app import app, db
-from app import translate
-from app import cli
+from app import create_app, db
 from app.models import User, Post
-translate.register(app)
+
+app = create_app()
+
 
 @app.shell_context_processor
 def make_shell_context():
