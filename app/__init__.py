@@ -9,6 +9,7 @@ from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
+from elasticsearch import Elasticsearch
 
 
 def get_locale():
@@ -76,8 +77,17 @@ def create_app(config_class=Config):
 
         app.logger.setLevel(logging.INFO)
         app.logger.info('Microblog startup')
+        
+    if app.config["ELASTICSEARCH_URL"]:
+        app.elasticsearch = Elasticsearch(
+			[app.config["ELASTICSEARCH_URL"]],
+			request_timeout=1,
+			max_retries=0,
+			retry_on_timeout=False,
+		)
+    else:
+        app.elasticsearch = None
+        
 
     return app
-
-
 from app import models
